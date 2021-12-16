@@ -11,10 +11,14 @@ $('div').click(function(){
 // $('.active').off('click', sayHello);
 
 
-console.log($('div').eq(2).find('.more'));
+// console.log($('div').eq(2).find('.more'));
+
+// console.log($('.some').closest('.findme'));
 
 // function sayHello() {
 //     console.log('hello');
 // };
 
 // console.log($('button').html('Knopka'));
+
+console.log($('.findme').siblings());
