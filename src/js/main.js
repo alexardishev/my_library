@@ -20,5 +20,4 @@ $('div').click(function(){
 // };
 
 // console.log($('button').html('Knopka'));
-
-console.log($('.findme').siblings());
+$('.findme').fadeOut(1800);
