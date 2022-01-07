@@ -37,16 +37,49 @@ $('button').eq(2).on('click', () => {
 
 
 
-$('.wrap').html(
-    `
-    <div class="dropdown">
-    <button class="btn btn-primary dropdown-toggle" id="dropdownMenuButton">Dropdown button</button>
-    <div class="dropdown-menu" data-toggle-id="dropdownMenuButton">
-        <a href="#" class="dropdown-item">Action</a>
-        <a href="#" class="dropdown-item">Action2</a>
-        <a href="#" class="dropdown-item">Action3</a>
-    </div>
-</div>` // Способ 2 когда помещаю верстку динамически, тогда надо инициализировать после верстки метод
-);
+// $('.wrap').html(
+//     `
+//     <div class="dropdown">
+//     <button class="btn btn-primary dropdown-toggle" id="dropdownMenuButton">Dropdown button</button>
+//     <div class="dropdown-menu" data-toggle-id="dropdownMenuButton">
+//         <a href="#" class="dropdown-item">Action</a>
+//         <a href="#" class="dropdown-item">Action2</a>
+//         <a href="#" class="dropdown-item">Action3</a>
+//     </div>
+// </div>` // Способ 2 когда помещаю верстку динамически, тогда надо инициализировать после верстки метод
+// );
 
-$('.dropdown-toggle').dropdown();
+// $('.dropdown-toggle').dropdown();
+
+$('#trigger').click(() => $('#trigger').createModal({
+    text: {
+        title: "Новое модальное окно",
+        body: "ВОт такие делишки ребята динамика"
+    },
+    btns: {
+        count: 3,
+        settings: [
+            [
+                'Close',
+                ['btn-danger', 'mr-10'],
+                true
+            ],
+            [
+                'Save changes',
+                ['btn-success'],
+                false,
+                () => {
+                    alert('Данные сохранены');
+                }
+            ],
+            [
+                'djskdj',
+                ['btn-warning', 'ml-10'],
+                false,
+                () => {
+                    alert('OK');
+                }
+            ]
+        ]
+    }
+}));
